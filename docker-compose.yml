@@ -59,3 +59,16 @@ services:
           - JUPYTER_ENABLE_LAB=1
           - GRANT_SUDO=yes
        command: start-notebook.sh --NotebookApp.notebook_dir=/notebooks
+
+    mongo:
+        image : mongo
+        container_name: mongo
+        environment:
+        - PUID=1000
+        - PGID=1000
+        volumes:
+        - /var/lib/nifi/mongo-data:/data/db
+        ports:
+        - 27017:27017
+        restart: unless-stopped
+    
