@@ -40,6 +40,9 @@ The description for each process in both workflows as the following
 
 ### Genearte COVID 19 Reports for UK
 The following operation used to achieve the purpose <br>
-* **Get_All_countries_data** Load all the data from [Johns Hopkins University Data from Github Repo](https://github.com/CSSEGISandData/COVID-19) and store it in Postgrss 
-* **clean_data** Clean process applied here and filter the data on UK only then store it on Postgress
+* **Get_uk_data** Load all the data from [Johns Hopkins University Data from Github Repo](https://github.com/CSSEGISandData/COVID-19) and store it in Postgrss with clean process applied and filter the data
 * **report_data** The result of proccess genearted and located on ./notebooks/output directory
+
+### Move Data from Postgrs to MongoDB
+The following operation used to achieve the purpose <br>
+* **extract_load** extract the data using pandas from and dump it to mongoDB
